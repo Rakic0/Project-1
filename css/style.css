@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* 
+
+White: #F9FAFB
+
+Grays: #374151
+
+Main: #059669
+
+*/
+
+/* 
+    font-family: 'Dancing Script', cursive;
+
+    font-family: 'Roboto', sans-serif; */
+
+/* GENERAL */
+
+.hidden {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  border-radius: 11px;
+  box-shadow: 0 0 0 0.4rem #f9fafbbe;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.6rem;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.f-cent {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.f-left {
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.f-space-b {
+  justify-content: space-between;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--2-cols {
+  grid-template-columns: 1fr 1fr;
+  gap: 7rem;
+}
+.grid--4-cols {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 7rem;
+}
+
+.btn {
+  color: currentColor;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 11px;
+}
+
+.btn--main {
+  font-size: 2.6rem;
+  padding: 0.7rem 1.4rem;
+  background-color: #059668;
+  box-shadow: inset 0 0 0 3px #059668;
+  transition: 0.6s;
+  margin-right: 5rem;
+  font-weight: 500;
+  animation: pulse 1s infinite;
+}
+
+.btn--main:hover {
+  transform: translateY(1.5px);
+}
+
+.btn--lm {
+  font-size: 2.4rem;
+  box-shadow: inset 0 0 0 4px #69c0a4;
+  transition: 0.3s;
+  padding: 0.7rem 1.4rem;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: inset 0 0 0 3px #059668;
+  }
+  50% {
+    box-shadow: inset 0 0 0 3px #cdeae1;
+  }
+  100% {
+    box-shadow: inset 0 0 0 3px #059668;
+  }
+}
+
+.btn--lm:hover {
+  box-shadow: inset 0 0 0 4px #cdeae1;
+  transform: translateY(1.5px);
+}
+
+/* HEADER */
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 8rem;
+  background-color: #05966894;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 80%;
+}
+
+/* .logo-box {
+  margin-right: auto;
+} */
+
+.logo {
+  font-family: "Dancing Script", cursive;
+  font-size: 4.4rem;
+  color: #f9fafb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  text-shadow: 0 0 1.5px #374151;
+}
+
+.logo:hover {
+  text-shadow: 0 0 3px #374151;
+}
+
+/* HEADER NAVIGATON */
+
+.nav {
+  position: relative;
+}
+
+.nav-list,
+.footer-list {
+  list-style: none;
+  display: flex;
+  color: #f9fafb;
+  gap: 20px;
+  font-size: 1.9rem;
+  transition: 0.3s;
+}
+
+.nav-link,
+.footer-link {
+  text-decoration: none;
+  color: currentColor;
+  text-transform: capitalize;
+}
+
+.nav-link:hover,
+.footer-link:hover {
+  color: #cdeae1;
+}
+
+.menu {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-open {
+  position: absolute;
+  background-color: #05966894;
+  right: 0;
+  height: 100vh;
+  width: 50%;
+  transform: translatex(1000px);
+  display: flex;
+  font-size: 3rem;
+  transition: all 0.2s ease-out;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5rem 0;
+  align-items: center;
+}
+
+.open {
+  transition: all 0.2s ease;
+  transform: translateY(0px);
+}
+
+.menu-open .nav-list {
+  display: flex;
+  flex-direction: column;
+  font-size: inherit;
+  gap: 3rem;
+}
+
+@keyframes extend {
+  from {
+    height: 8rem;
+  }
+  to {
+    height: auto;
+  }
+}
+
+@keyframes extend {
+  from {
+    height: 8rem;
+  }
+  to {
+    height: auto;
+  }
+}
+
+/* MAIN */
+
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+.main .container {
+  width: 100%;
+  padding: 0;
+}
+
+.bi-list {
+  color: #f9fafb;
+  fill: #f9fafb;
+}
+/* HERO SECTION */
+
+.hero-section {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../img/hero-bg.jpg");
+  height: 75vh;
+  max-width: 100%;
+  background-size: cover;
+  background-position: center;
+  color: #f9fafb;
+  margin-bottom: 7rem;
+}
+
+.hero-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 6rem;
+}
+
+.hero-subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+}
+
+/* ARTICLES */
+
+.articles .container {
+  max-width: 120rem;
+}
+
+.hiking-destination {
+  color: #374151;
+  margin-bottom: 7rem;
+}
+
+.hiking-destination-grid-img {
+  width: 90%;
+  border-radius: 11px;
+}
+
+.hiking-destination-title {
+  color: currentColor;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.hiking-destination-text {
+  color: currentColor;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  align-self: center;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 3.6rem 0;
+  background-color: #05966894;
+  color: #f9fafb;
+}
+
+.footer .container {
+  width: 80%;
+}
+
+.footer-nav .flex {
+  width: 50%;
+}
+
+.footer-nav-section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.3rem;
+}
+
+.footer-nav-section-title::after {
+  content: " ";
+  display: block;
+  background-color: #cdeae1;
+  height: 2px;
+  width: 70%;
+  margin-top: 0.5rem;
+}
+
+.footer-list {
+  flex-direction: column;
+  gap: 1rem;
+}
