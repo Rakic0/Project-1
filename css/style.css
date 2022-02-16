@@ -211,7 +211,7 @@ html {
   right: 0;
   height: 100vh;
   width: 50%;
-  transform: translatex(1000px);
+  transform: translatex(5000px);
   display: flex;
   font-size: 3rem;
   transition: all 0.2s ease-out;
@@ -219,10 +219,16 @@ html {
   justify-content: space-around;
   padding: 5rem 0;
   align-items: center;
+  transition: all 0.5s;
+
+  opacity: 0;
+  pointer-events: none;
 }
 
 .open {
-  transition: all 0.2s ease;
+  opacity: 100;
+  pointer-events: auto;
+  transition: all 0.5s;
   transform: translateY(0px);
 }
 
@@ -275,7 +281,7 @@ html {
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url("../img/hero-bg.jpg");
+    url("../img/hero-bg1920x1080.webp");
   height: 75vh;
   max-width: 100%;
   background-size: cover;
